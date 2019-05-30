@@ -1,0 +1,23 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "A demo app for people to find friends based on survey results.  Uses an self-created API (with express) and is hosted by Heroku.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leavinit/FriendFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leavinit/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/leavinit/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

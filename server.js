@@ -2,7 +2,8 @@ var express = require("express");
 var path = require("path");
 
 var app = express();
-var PORT = 8080;
+var PORT = process.env.PORT || 3000;
+
 
 
 var htmlRoutes = require("./app/routing/htmlroutes");
@@ -14,5 +15,5 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
 
-app.listen(3000);
-console.log("app listening on port 3000");
+app.listen(PORT);
+console.log("app listening on port "+PORT);

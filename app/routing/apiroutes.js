@@ -32,10 +32,12 @@ app.get("/api/friends", function(req, res) {
 });
 app.post("/api/friends",function(req,res){
     //route to add a new friend to the allFriends object when the user sends 
-    console.log(req.body);
+    // console.log(req.body);
     var newFriend = req.body;
-    console.log("adding via /api/friends(?)")
+    console.log("adding via /api/friends")
     console.log(newFriend);
+    allFriends.push(newFriend);
+    console.log("allfriends: " + allFriends);
     res.send(req.body);
 })
 

@@ -6,131 +6,167 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <title>FriendFinder</title>
 </head>
 <body>
-    <h1>SURVEY PAGE</h1>
-    <div id="userInfoDiv">
-        <h2>About You</h2>
-        <p>Name (Required)</p>
-        <input id="name" type="text">
-        <p>Link to Photo Image (Required)</p>
-        <input id="photo" type="text">
-    </div>
-    <div id="surveyDiv">
-        <h3>Question 1</h3>
-        <h4>You love being outdoors and avoid staying inside on a warm, sunny day.</h4>
-        <select id="question_1">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <h3>Question 2</h3>
-        <h4>You prefer acquiring a breadth of knowledge in various areas rather than focus intently on one or two.</h4>
-        <select id="question_2">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <h3>Question 3</h3>
-        <h4>You prefer large parties rather than small gatherings.</h4>
-        <select id="question_3">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <h3>Question 4</h3>
-        <h4>You think luck plays a large role in life.</h4>
-        <select id="question_4">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <h3>Question 5</h3>
-        <h4>You are a gun owner.</h4>
-        <select id="question_5">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <h3>Question 6</h3>
-        <h4>You are a meticulous person who feels at ease when you have detailed plans.</h4>
-        <select id="question_6">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <h3>Question 7</h3>
-        <h4>You enjoy drinking (at the appropriate times).</h4>
-        <select id="question_7">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <h3>Question 8</h3>
-        <h4>You believe in a higher power.</h4>
-        <select id="question_8">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <h3>Question 9</h3>
-        <h4>You are a handy person, who'd rather find a Youtube how-to video to fix something rather than have someone else do it.</h4>
-        <select id="question_9">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <h3>Question 10</h3>
-        <h4>You believe a homeless person's opinion on any given topic is as valid as your own.</h4>
-        <select id="question_10">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-        </select>
-    </div>
-    <div id="buttonDiv">
-        <button id="submit">Find A Friend!</button>
-    </div>
-            
-    <script type="text/javascript">
+        <style>
+                .row {
+                        margin-top : 40 px;
+                }
+                h3 {
+                        margin-top: 20px;
+                }
+                
+        </style>
+        <div class="container">
+                <div class="jumbotron"><h1>SURVEY PAGE</h1></div>
+                <div class="row">
+                        <div class="col-md-12" id="userInfoDiv">
+                                <h2>About You</h2>
+                                <p>Name (Required)</p>
+                                <input id="name" type="text" class='form1'>
+                                <p>Link to Photo Image (Required)</p>
+                                <input id="photo" type="text" class='form1'>
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-12" id="surveyDiv">
+                        
+                                <h3>Question 1</h3>
+                                <h4>You love being outdoors and avoid staying inside on a warm, sunny day.</h4>
+                                <select id="question_1" class='form1'>
+                                        <option value=""></option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>Question 2</h3>
+                                <h4>You prefer acquiring a breadth of knowledge in various areas rather than focus intently on one or two.</h4>
+                                <select id="question_2" class='form1'>
+                                        <option value=""></option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>Question 3</h3>
+                                <h4>You prefer large parties rather than small gatherings.</h4>
+                                <select id="question_3" class='form1'>
+                                        <option value=""></option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>Question 4</h3>
+                                <h4>You think luck plays a large role in life.</h4>
+                                <select id="question_4" class='form1'>
+                                        <option value=""></option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>Question 5</h3>
+                                <h4>You are a gun owner.</h4>
+                                <select id="question_5" class='form1'>
+                                        <option value=""></option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>Question 6</h3>
+                                <h4>You are a meticulous person who feels at ease when you have detailed plans.</h4>
+                                <select id="question_6" class='form1'>
+                                        <option value=""></option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>Question 7</h3>
+                                <h4>You enjoy drinking (at the appropriate time).</h4>
+                                <select id="question_7" class='form1'>
+                                        <option value=""></option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>Question 8</h3>
+                                <h4>You believe in a higher power.</h4>
+                                <select id="question_8" class='form1'>
+                                        <option value=""></option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>Question 9</h3>
+                                <h4>You are a handy person, who'd rather find a Youtube how-to video to fix something rather than have someone else do it.</h4>
+                                <select id="question_9" class='form1'>
+                                        <option value=""></option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                                <h3>Question 10</h3>
+                                <h4>You believe a homeless person's opinion on any given topic is as valid as your own.</h4>
+                                <select id="question_10" class='form1'>
+                                        <option value=""></option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-12" id="buttonDiv">
+                                <button id="submit">Find A Friend!</button>
+                        </div>
+                </div>
+      </div>
+        <script type="text/javascript">
+        //form validation (code for this utility function acquired from sample f.f.)
+        function validateForm() {
+                var isValid = true;
+                $(".form1").each(function() {
+                        if ($(this).val() === "") {
+                                isValid = false;
+                        }
+                });
+
+                // $(".chosen-select").each(function() {
+                //         if ($(this).val() === "") {
+                //                 isValid = false;
+                //         }
+                // });
+                return isValid;
+        }
+
         $("#submit").click(function(event){
             event.preventDefault();
             // answers = []
             friendObj = 
             {
-                name:"Ahmed",
+                name:"Ahmedq666",
                 photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
                 scores:[
                     5,
@@ -144,32 +180,38 @@
                     4,
                     1]
             }
+        if(validateForm()){
             friendObj2 = 
             {
                 name:$("#name").val(),
                 photo: $("#photo").val(),
                 scores:[
-                    $("#question1").val(),
-                    $("#question2").val(),
-                    $("#question3").val(),
-                    $("#question4").val(),
-                    $("#question5").val(),
-                    $("#question6").val(),                    
-                    $("#question7").val(),
-                    $("#question8").val(),
-                    $("#question9").val(),
-                    $("#question10").val()
+                    $("#question_1").val(),
+                    $("#question_2").val(),
+                    $("#question_3").val(),
+                    $("#question_4").val(),
+                    $("#question_5").val(),
+                    $("#question_6").val(),                    
+                    $("#question_7").val(),
+                    $("#question_8").val(),
+                    $("#question_9").val(),
+                    $("#question_10").val()
                 ]
             }
-            
+        
             $.post("/api/friends", friendObj2)
             .then(function(data) {
                 console.log("survey.html", data);
-                console.log("Added character...");
+                console.log("Added friend...");
             });
-
+        }
+        else{
+                alert("Please fill out all fields before submitting!");
+        }
         });
+
     </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     
 </body>
 </html>

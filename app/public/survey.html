@@ -245,10 +245,17 @@
                 $(".modal-title").html(
                         "<p> Your new best friend: </p>"
                 )
+                
+                $('#exampleModal').on('hidden.bs.modal', function (e) {
+                        setTimeout(function(){ 
+                                window.location = '/';
+                        }, 700);
+                        
+                })
+                
+               //opens modal 
                 $("#exampleModal").modal();
-                // $('#myModal').on('hidden.bs.modal', function (e) {
-                // // do something...
-                // })
+                
                 });
         }
         else{

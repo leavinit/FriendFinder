@@ -38,7 +38,12 @@ app.post("/api/friends",function(req,res){
     console.log(newFriend);
     allFriends.push(newFriend);
     console.log("allfriends: " + allFriends);
-    res.send(req.body);
+
+
+    var infoForModal = ""
+    infoForModal += "<p>"+newFriend.name+"</p>"
+    infoForModal += "<img src="+newFriend.photo+ "alt='friend pic'>"
+    res.send(infoForModal);
 })
 
 // app.post('/api/friends', function(req, res){

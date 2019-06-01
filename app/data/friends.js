@@ -2,20 +2,55 @@
 var allFriends =
 [
     {
-        "name":"Ahmed",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-        "scores":[
-            5,
-            1,
-            4,
-            4,
-            5,
-            1,
-            2,
-            5,
-            4,
-            1]
-    }
+        name:"Ahmed",
+        photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        scores:[
+            '5',
+            '1',
+            '4',
+            '4',
+            '5',
+            '1',
+            '2',
+            '5',
+            '4',
+            '1']
+    },
+    { 
+        name: 'Randall Goodman',
+        photo: 'https://randomuser.me/api/portraits/men/15.jpg',
+        scores: [ '2', '3', '4', '3', '3', '5', '1', '3', '5', '2' ] 
+    },
+    { 
+        name: 'Amy Radalf',
+        photo: 'https://randomuser.me/api/portraits/women/50.jpg',
+        scores: [ '4', '4', '4', '2', '5', '4', '1', '3', '3', '5' ] 
+    },
+    { 
+        name: 'Janelle Santori',
+        photo: 'https://randomuser.me/api/portraits/women/89.jpg',
+        scores: [ '2', '3', '3', '4', '4', '1', '2', '2', '3', '4' ] 
+    },
+    { 
+        name: 'Guy McGueyerson',
+        photo: 'https://randomuser.me/api/portraits/men/78.jpg',
+        scores: [ '1', '1', '1', '1', '1', '1', '1', '1', '1', '1' ] 
+    },
+    { 
+        name: 'Mario Luigi',
+        photo: 'https://randomuser.me/api/portraits/lego/8.jpg',
+        scores: [ '5', '3', '5', '4', '1', '4', '5', '4', '5', '5' ] 
+    },
+    { 
+        name: 'Radon Stellarbuzz',
+        photo:
+            'https://bloximages.chicago2.vip.townnews.com/newsandtech.com/content/tncms/assets/v3/editorial/1/54/1547a354-433d-11e8-9f14-17cdfe175bab/5ad799c6183d2.image.png',
+        scores: [ '1', '2', '3', '4', '4', '3', '2', '2', '1', '1' ] 
+    },
+    { name: 'Talib Stewart',
+  photo: 'https://randomuser.me/api/portraits/men/26.jpg',
+  scores: [ '4', '4', '3', '5', '1', '1', '3', '4', '4', '3' ] }
+
 ]; 
 
 
